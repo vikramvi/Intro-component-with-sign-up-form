@@ -35,9 +35,17 @@
 
       <form class="user-input__form">
         <input type="text" placeholder="First Name" required class="user-input__form-firstname">
+        <p class="user-input__form-firstname-error">First Name cannot be empty</p>
+
         <input type="text" placeholder="Last Name" required class="user-input__form-lastname">
+        <p class="user-input__form-lastname-error">Last Name cannot be empty</p>
+
         <input type="email" placeholder="Email Address" required class="user-input__form-email">
+        <p class="user-input__form-email-error">Looks like this is not an email</p>
+
         <input type="password" placeholder="Password" required class="user-input__form-password">
+        <p class="user-input__form-password-error">Password cannot be empty</p>
+
         <button class="user-input__form-button">Claim your free trial</button>
         <p class="user-input__form-terms-and-conditions">
           By clicking the button, you are agreeing to our <span> Terms and Services </span>
