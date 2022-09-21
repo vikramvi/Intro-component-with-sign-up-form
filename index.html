@@ -10,6 +10,9 @@
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
+  <!-- https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup  -->
+  <script src="./scripts/script.js" async defer></script>
+
 </head>
 
 <body>
@@ -34,16 +37,16 @@
       </h3>
 
       <form class="user-input__form">
-        <input type="text" placeholder="First Name" required class="user-input__form-firstname">
+        <input type="text" placeholder="First Name" class="user-input__form-firstname">
         <p class="user-input__form-firstname-error">First Name cannot be empty</p>
 
-        <input type="text" placeholder="Last Name" required class="user-input__form-lastname">
+        <input type="text" placeholder="Last Name" class="user-input__form-lastname">
         <p class="user-input__form-lastname-error">Last Name cannot be empty</p>
 
-        <input type="email" placeholder="Email Address" required class="user-input__form-email">
+        <input placeholder="Email Address" class="user-input__form-email">
         <p class="user-input__form-email-error">Looks like this is not an email</p>
 
-        <input type="password" placeholder="Password" required class="user-input__form-password">
+        <input type="password" placeholder="Password" class="user-input__form-password">
         <p class="user-input__form-password-error">Password cannot be empty</p>
 
         <button class="user-input__form-button">Claim your free trial</button>
