@@ -74,7 +74,8 @@ const checkInputFields = (e) => {
     email.type = "email";
     console.log("email " + email.value + "  " + email.checkValidity());
 
-    if (email.checkValidity() === false) {
+    //https://stackoverflow.com/questions/73799704/why-checkvalidity-is-returning-true-for-input-field-of-type-email-with-empty
+    if (email.checkValidity() === false || email.value.trim() === "") {
         emailError.style.display = "block";
     }
 
