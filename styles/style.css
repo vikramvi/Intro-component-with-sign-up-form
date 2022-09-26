@@ -1,0 +1,224 @@
+/* ----------- ----------- ----------- ----------- ----------- ----------- */
+/* --------------------------- generic styling --------------------------- */
+/* ----------- ----------- ----------- ----------- ----------- ----------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* color related */
+
+  --clr-primary-red: hsl(0, 100%, 74%);
+  --clr-primary-green: hsl(154, 59%, 51%);
+
+  --clr-accent-blue: hsl(248, 32%, 49%);
+
+  --clr-neutral-dark-blue: hsl(249, 10%, 26%);
+  --clr-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+  /* fonts related */
+
+  font-family: "Poppins", sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* typography */
+html {
+  /* 62.5% of 16px browser font size is 10px */
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  /* 16px */
+  font-size: 1.6em;
+  font-family: var(--ff-primary);
+
+  height: 100vh;
+  background-color: var(--clr-primary-red);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* apply spacing for all paragraph text */
+p {
+  line-height: 1.7;
+}
+
+.product-info,
+.user-input {
+  border: 1px solid red;
+}
+
+/* ----------- ----------- ----------- ----------- ----------- ------------ */
+/* --------------------------- specific styling --------------------------- */
+/* ----------- ----------- ----------- ----------- ----------- ------------ */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------- ----------- ----------- mobile first approach ----------- ----------- ----------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "product-info"
+    "user-input";
+
+  gap: 5rem;
+
+  min-width: 37.5rem;
+}
+
+/* style 1st component - mobile */
+
+.product-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "product-info__title"
+    "product-info__description";
+  justify-items: center;
+  gap: 2rem;
+}
+
+.product-info__title {
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: var(--fw-700);
+  color: white;
+}
+
+.product-info__description {
+  text-align: center;
+  width: 75%;
+  font-size: 1.4rem;
+  color: white;
+}
+
+/* style 2nd component - mobile */
+.user-input {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "user-input__title"
+    "user-input__form";
+  gap: 2rem;
+  justify-items: center;
+}
+
+.user-input__title {
+  width: 85%;
+  justify-self: center;
+  padding: 1.5rem 4rem;
+  border: 1px solid black;
+  text-align: center;
+  background-color: var(--clr-accent-blue);
+  color: white;
+}
+
+.user-input__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "user-input__form-firstname"
+    "user-input__form-lastname"
+    "user-input__form-email"
+    "user-input__form-password"
+    "user-input__form-button"
+    "user-input__form-terms-and-conditions";
+  width: 80%;
+  justify-items: center;
+  border: 1px solid black;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.user-input__form-firstname,
+.user-input__form-lastname,
+.user-input__form-email,
+.user-input__form-password,
+.user-input__form-button,
+.user-input__form-terms-and-conditions {
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+/* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
+
+/* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
+
+/* Component 1 grid areas */
+
+.product-info {
+  grid-area: product-info;
+}
+
+.product-info__title {
+  grid-area: product-info__title;
+}
+
+.product-info__description {
+  grid-area: product-info__description;
+}
+
+/* Component 2 grid areas */
+
+.user-input {
+  grid-area: user-input;
+}
+
+.user-input__title {
+  grid-area: user-input__title;
+}
+
+.user-input__form {
+  grid-area: user-input__form;
+}
+
+.user-input__form-firstname {
+  grid-area: user-input__form-firstname;
+}
+
+.user-input__form-lastname {
+  grid-area: user-input__form-lastname;
+}
+
+.user-input__form-email {
+  grid-area: user-input__form-email;
+}
+
+.user-input__form-password {
+  grid-area: user-input__form-password;
+}
+
+.user-input__form-button {
+  grid-area: user-input__form-button;
+}
+
+.user-input__form-terms-and-conditions {
+  grid-area: user-input__form-terms-and-conditions;
+}
