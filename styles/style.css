@@ -144,12 +144,16 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas:
     "user-input__form-firstname"
+    "user-input__form-error-icon-1"
     "user-input__form-firstname-error"
     "user-input__form-lastname"
+    "user-input__form-error-icon-2"
     "user-input__form-lastname-error"
     "user-input__form-email"
+    "user-input__form-error-icon-3"
     "user-input__form-email-error"
     "user-input__form-password"
+    "user-input__form-error-icon-4"
     "user-input__form-password-error"
     "user-input__form-button"
     "user-input__form-terms-and-conditions";
@@ -181,6 +185,16 @@ body {
 .user-input__form-email,
 .user-input__form-password {
   margin-bottom: 1.5rem;
+}
+
+.user-input__form-error-icon-1,
+.user-input__form-error-icon-2,
+.user-input__form-error-icon-3,
+.user-input__form-error-icon-4 {
+  justify-self: right;
+  padding-right: 15%;
+  margin-top: -9%;
+  height: 2rem;
 }
 
 .user-input__form-firstname-error,
@@ -265,4 +279,20 @@ body {
 
 .user-input__form-terms-and-conditions {
   grid-area: user-input__form-terms-and-conditions;
+}
+
+.user-input__form-error-icon-1 {
+  grid-area: user-input__form-error-icon-1;
+}
+
+.user-input__form-error-icon-2 {
+  grid-area: user-input__form-error-icon-2;
+}
+
+.user-input__form-error-icon-3 {
+  grid-area: user-input__form-error-icon-3;
+}
+
+.user-input__form-error-icon-4 {
+  grid-area: user-input__form-error-icon-4;
 }

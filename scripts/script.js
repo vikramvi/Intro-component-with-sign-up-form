@@ -21,6 +21,12 @@ const lastNameError = document.querySelector(".user-input__form-lastname-error")
 const emailError = document.querySelector(".user-input__form-email-error");
 const passwordError = document.querySelector(".user-input__form-password-error");
 
+const firstNameErrorIcon = document.querySelector(".user-input__form-error-icon-1");
+const lastNameErrorIcon = document.querySelector(".user-input__form-error-icon-2");
+const emailErrorIcon = document.querySelector(".user-input__form-error-icon-3");
+const passwordErrorIcon = document.querySelector(".user-input__form-error-icon-4");
+
+
 
 
 //-----------------  Functions  -----------------
@@ -30,6 +36,12 @@ const hideAllErrorMessages = () => {
     lastNameError.style.display = "none";
     emailError.style.display = "none";
     passwordError.style.display = "none";
+
+    firstNameErrorIcon.style.display = "none";
+    lastNameErrorIcon.style.display = "none";
+    emailErrorIcon.style.display = "none";
+    passwordErrorIcon.style.display = "none";
+
 }
 
 const clearAllInputValues = () => {
@@ -63,6 +75,7 @@ const checkInputFields = (e) => {
 
     if (firstName.value.trim() === "") {
         firstNameError.style.display = "block";
+        firstNameErrorIcon.style.display = "block";
 
         firstName.style.marginBottom = "0rem";
         firstName.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -71,6 +84,7 @@ const checkInputFields = (e) => {
 
     if (lastName.value.trim() === "") {
         lastNameError.style.display = "block";
+        lastNameErrorIcon.style.display = "block";
 
         lastName.style.marginBottom = "0rem";
         lastName.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -85,6 +99,7 @@ const checkInputFields = (e) => {
     //https://stackoverflow.com/questions/73799704/why-checkvalidity-is-returning-true-for-input-field-of-type-email-with-empty
     if (email.checkValidity() === false || email.value.trim() === "") {
         emailError.style.display = "block";
+        emailErrorIcon.style.display = "block";
 
         email.style.marginBottom = "0rem";
         email.style.border = "1px solid hsl(0, 100%, 74%)";
@@ -93,6 +108,7 @@ const checkInputFields = (e) => {
 
     if (password.value.trim() === "") {
         passwordError.style.display = "block";
+        passwordErrorIcon.style.display = "block";
 
         password.style.marginBottom = "0rem";
         password.style.border = "1px solid hsl(0, 100%, 74%)";
