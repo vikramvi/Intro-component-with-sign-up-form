@@ -63,10 +63,18 @@ const checkInputFields = (e) => {
 
     if (firstName.value.trim() === "") {
         firstNameError.style.display = "block";
+
+        firstName.style.marginBottom = "0rem";
+        firstName.style.border = "1px solid hsl(0, 100%, 74%)";
+        firstName.removeAttribute("placeholder");
     }
 
     if (lastName.value.trim() === "") {
         lastNameError.style.display = "block";
+
+        lastName.style.marginBottom = "0rem";
+        lastName.style.border = "1px solid hsl(0, 100%, 74%)";
+        lastName.removeAttribute("placeholder");
     }
 
     //https://stackoverflow.com/a/13975255/2607372
@@ -77,10 +85,18 @@ const checkInputFields = (e) => {
     //https://stackoverflow.com/questions/73799704/why-checkvalidity-is-returning-true-for-input-field-of-type-email-with-empty
     if (email.checkValidity() === false || email.value.trim() === "") {
         emailError.style.display = "block";
+
+        email.style.marginBottom = "0rem";
+        email.style.border = "1px solid hsl(0, 100%, 74%)";
+        email.removeAttribute("placeholder");
     }
 
     if (password.value.trim() === "") {
         passwordError.style.display = "block";
+
+        password.style.marginBottom = "0rem";
+        password.style.border = "1px solid hsl(0, 100%, 74%)";
+        password.removeAttribute("placeholder");
     }
 
     console.log("form is submitted");

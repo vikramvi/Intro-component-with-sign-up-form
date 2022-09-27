@@ -49,7 +49,7 @@ body {
   font-size: 1.6em;
   font-family: var(--ff-primary);
 
-  height: 100vh;
+  min-height: 100%;
   background-color: var(--clr-primary-red);
 }
 
@@ -144,16 +144,19 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas:
     "user-input__form-firstname"
+    "user-input__form-firstname-error"
     "user-input__form-lastname"
+    "user-input__form-lastname-error"
     "user-input__form-email"
+    "user-input__form-email-error"
     "user-input__form-password"
+    "user-input__form-password-error"
     "user-input__form-button"
     "user-input__form-terms-and-conditions";
   width: 80%;
   justify-items: center;
-  border: 1px solid black;
+  background-color: white;
   padding: 2rem 0;
-  gap: 1rem;
 }
 
 .user-input__form-firstname,
@@ -165,6 +168,31 @@ body {
   padding: 1rem 1rem;
   font-size: 1.2rem;
   width: 80%;
+}
+
+.user-input__form-button {
+  background-color: var(--clr-primary-green);
+  border: none;
+  color: white;
+}
+
+.user-input__form-firstname,
+.user-input__form-lastname,
+.user-input__form-email,
+.user-input__form-password {
+  margin-bottom: 1.5rem;
+}
+
+.user-input__form-firstname-error,
+.user-input__form-lastname-error,
+.user-input__form-email-error,
+.user-input__form-password-error {
+  color: var(--clr-primary-red);
+  font-size: 1rem;
+  font-style: italic;
+
+  justify-self: right;
+  padding: 0.5rem 3rem 1.3rem 0;
 }
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
@@ -203,16 +231,32 @@ body {
   grid-area: user-input__form-firstname;
 }
 
+.user-input__form-firstname-error {
+  grid-area: user-input__form-firstname-error;
+}
+
 .user-input__form-lastname {
   grid-area: user-input__form-lastname;
+}
+
+.user-input__form-lastname-error {
+  grid-area: user-input__form-lastname-error;
 }
 
 .user-input__form-email {
   grid-area: user-input__form-email;
 }
 
+.user-input__form-email-error {
+  grid-area: user-input__form-email-error;
+}
+
 .user-input__form-password {
   grid-area: user-input__form-password;
+}
+
+.user-input__form-password-error {
+  grid-area: user-input__form-password-error;
 }
 
 .user-input__form-button {
