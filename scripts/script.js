@@ -51,6 +51,12 @@ const clearAllInputValues = () => {
     password.value = "";
 }
 
+const errorStyling = (el) => {
+    el.style.marginBottom = "0rem";
+    el.style.border = "1px solid hsl(0, 100%, 74%)";
+    el.removeAttribute("placeholder");
+}
+
 //hide all error messages at page load
 window.onload = () => {
 
@@ -77,18 +83,14 @@ const checkInputFields = (e) => {
         firstNameError.style.display = "block";
         firstNameErrorIcon.style.display = "block";
 
-        firstName.style.marginBottom = "0rem";
-        firstName.style.border = "1px solid hsl(0, 100%, 74%)";
-        firstName.removeAttribute("placeholder");
+        errorStyling(firstName);
     }
 
     if (lastName.value.trim() === "") {
         lastNameError.style.display = "block";
         lastNameErrorIcon.style.display = "block";
 
-        lastName.style.marginBottom = "0rem";
-        lastName.style.border = "1px solid hsl(0, 100%, 74%)";
-        lastName.removeAttribute("placeholder");
+        errorStyling(lastName);
     }
 
     //https://stackoverflow.com/a/13975255/2607372
@@ -101,18 +103,14 @@ const checkInputFields = (e) => {
         emailError.style.display = "block";
         emailErrorIcon.style.display = "block";
 
-        email.style.marginBottom = "0rem";
-        email.style.border = "1px solid hsl(0, 100%, 74%)";
-        email.removeAttribute("placeholder");
+        errorStyling(email);
     }
 
     if (password.value.trim() === "") {
         passwordError.style.display = "block";
         passwordErrorIcon.style.display = "block";
 
-        password.style.marginBottom = "0rem";
-        password.style.border = "1px solid hsl(0, 100%, 74%)";
-        password.removeAttribute("placeholder");
+        errorStyling(password);
     }
 
     console.log("form is submitted");
