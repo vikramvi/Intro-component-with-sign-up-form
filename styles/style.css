@@ -166,7 +166,8 @@ body {
   width: 80%;
   justify-items: center;
   background-color: white;
-  padding: 2rem 0;
+  padding: 3rem 0 1.5rem 0;
+  border-radius: 1rem;
 }
 
 .user-input__form-firstname,
@@ -177,6 +178,14 @@ body {
   padding: 1rem 1rem;
   font-size: 1.2rem;
   width: 80%;
+
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.user-input__form-button {
+  margin-bottom: 0;
 }
 
 input::placeholder {
@@ -235,6 +244,75 @@ input::placeholder {
 }
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
+
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+
+  .grid-container {
+    gap: 0;
+  }
+
+  /* style 1st component - desktop */
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "product-info user-input";
+  }
+
+  .product-info {
+    grid-template-rows: 180px 100px;
+  }
+
+  .product-info__title {
+    font-size: 4rem;
+    text-align: start;
+    width: 65%;
+    justify-self: right;
+    align-self: end;
+  }
+
+  .product-info__description {
+    text-align: start;
+    width: 65%;
+    justify-self: right;
+  }
+
+  /* style 2nd component - desktop */
+
+  .user-input {
+    justify-items: start;
+  }
+
+  .user-input__title {
+    justify-self: start;
+    width: 60%;
+  }
+
+  .user-input__form {
+    width: 60%;
+    padding: 3.5rem 0;
+  }
+
+  .user-input__form-terms-and-conditions {
+    width: 85%;
+  }
+
+  .user-input__form-error-icon-1,
+  .user-input__form-error-icon-2,
+  .user-input__form-error-icon-3,
+  .user-input__form-error-icon-4 {
+    margin-top: -7%;
+  }
+
+  .user-input__form-firstname-error,
+  .user-input__form-lastname-error,
+  .user-input__form-email-error,
+  .user-input__form-password-error {
+    padding: 0.5rem 5rem 1.3rem 0;
+  }
+}
 
 /* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
 
